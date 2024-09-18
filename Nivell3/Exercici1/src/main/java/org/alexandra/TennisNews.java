@@ -1,6 +1,6 @@
 package org.alexandra;
 
-public class TennisNews extends SportNews implements Price{
+public class TennisNews extends SportNews implements Price, Score{
     private String competition;
     private String tennisPlayers;
 
@@ -19,4 +19,14 @@ public class TennisNews extends SportNews implements Price{
         System.out.println(TennisNews.super.title + " price: " + price + "€");
         return price;
     }
+
+    public Integer calculateScore(){
+        Integer score = 4;
+        if(tennisPlayers.equals("Federer") || tennisPlayers.equals("Nadal") || tennisPlayers.equals("Djokovic")) {
+            score = score + 3;
+        }
+        System.out.println(TennisNews.super.title + " score: " + score + " points");
+        return score;
+    }
+
 }

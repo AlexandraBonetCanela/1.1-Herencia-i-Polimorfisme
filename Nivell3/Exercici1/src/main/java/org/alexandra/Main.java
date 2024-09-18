@@ -3,7 +3,7 @@ package org.alexandra;
 public class Main {
     public static void main(String[] args) {
 
-        // 1.Introduce Editor
+        // 1.Create Editor
         Editor editor1 = new Editor("Elliot", "4778456Q");
         Editor editor2 = new Editor("Sarah", "6768456J");
 
@@ -15,6 +15,7 @@ public class Main {
         editor1.news.add(barsaWinsChampionsNews);
 
         // 4.Delete News
+        editor1.news.remove(barsaWinsChampionsNews);
         barsaWinsChampionsNews = null;
 
         // 5.Show all news from an Editor
@@ -28,11 +29,20 @@ public class Main {
         editor1.news.add(nadalRetiresNews);
         editor1.news.add(euroleagueNews);
 
-        // 6.Calculate News's score
+        System.out.println(editor1.getName() + "'s News:");
+        for (SportNews article:  editor1.news){
+            System.out.println(article.title);
+        }
 
+        // 6.Calculate News's score
+        System.out.println("\nNews'scores:");
+        madridWinsChampionsNews.calculateScore();
+        ferrariWinsRaceNews.calculateScore();
+        nadalRetiresNews.calculateScore();
+        euroleagueNews.calculateScore();
 
         // 7.Calculate News's price
-        System.out.println("News'prices:");
+        System.out.println("\nNews'prices:");
         madridWinsChampionsNews.calculateNewsPrice();
         ferrariWinsRaceNews.calculateNewsPrice();
         nadalRetiresNews.calculateNewsPrice();

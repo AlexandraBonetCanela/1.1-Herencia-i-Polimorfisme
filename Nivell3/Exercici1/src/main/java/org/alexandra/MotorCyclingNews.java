@@ -1,6 +1,6 @@
 package org.alexandra;
 
-public class MotorCyclingNews extends SportNews implements Price{
+public class MotorCyclingNews extends SportNews implements Price, Score{
     private String team;
 
     public MotorCyclingNews(String name, String team) {
@@ -16,5 +16,14 @@ public class MotorCyclingNews extends SportNews implements Price{
         }
         System.out.println(MotorCyclingNews.super.title + " price: " + price + "€");
         return price;
+    }
+
+    public Integer calculateScore(){
+        Integer score = 3;
+        if(team.equals("Honda") || team.equals("Yamaha")) {
+            score = score + 3;
+        }
+        System.out.println(MotorCyclingNews.super.title + " score: " + score + " points");
+        return score;
     }
 }
