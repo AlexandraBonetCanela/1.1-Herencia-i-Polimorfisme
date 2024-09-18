@@ -3,13 +3,13 @@ package org.alexandra;
 public class Car {
     static final String BRAND = "MERCEDES";
     static String model;
-    final Long POWER;
+    final Integer POWER;
 
-    public Car(String model) {
-        // Since BRAND and POWER are constants, the only one that can be initialized
+    public Car(String model, Integer power) {
+        // POWER is a constant for each object initiated. Once assigned in the constructor, won't be able to be changed again.
         // is the model property.
         Car.model = model;
-        this.POWER = 900L;
+        this.POWER = power;
     }
 
     static void stop(){
