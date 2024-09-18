@@ -1,8 +1,13 @@
 package org.alexandra;
 
 public class Telephone {
-    private String brand;
-    private String model;
+    protected String brand;
+    protected String model;
+
+    public Telephone(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
 
     public void call(String phoneNumber){
         System.out.println("Calling " + phoneNumber);
