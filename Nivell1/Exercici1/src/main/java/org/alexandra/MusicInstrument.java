@@ -9,6 +9,11 @@ public abstract class MusicInstrument {
     protected String name;
     protected BigDecimal price;
 
+    public MusicInstrument(String name, BigDecimal price) {
+        this.name = name;
+        this.price = price;
+    }
+
     protected abstract void play();
 
     protected static void type(){

@@ -31,9 +31,5 @@ public class Main {
         //Does not load StringInstrument class again
         System.out.println("Creating second instance of StringInstrument");
         StringInstrument violin = new StringInstrument("violin", new BigDecimal(10000));
-
-
-
-
     }
 }

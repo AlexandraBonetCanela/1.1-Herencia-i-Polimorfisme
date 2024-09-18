@@ -9,8 +9,7 @@ public class WindInstrument extends MusicInstrument {
     }
 
     public WindInstrument(String name, BigDecimal price) {
-        this.name = name;
-        this.price = price;
+        super(name, price);
     }
     protected void play() {
         System.out.println("A Wind Instrument is playing");

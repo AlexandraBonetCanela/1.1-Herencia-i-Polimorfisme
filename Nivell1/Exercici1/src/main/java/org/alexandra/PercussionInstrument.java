@@ -9,8 +9,7 @@ public class PercussionInstrument extends MusicInstrument {
     }
 
     public PercussionInstrument(String name, BigDecimal price) {
-        this.name = name;
-        this.price = price;
+        super(name, price);
     }
 
     public void play(){
