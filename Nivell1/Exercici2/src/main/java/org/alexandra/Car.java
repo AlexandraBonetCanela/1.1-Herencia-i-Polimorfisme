@@ -1,7 +1,7 @@
 package org.alexandra;
 
 public class Car {
-    private static final String BRAND = "MERCEDES";
+    protected static final String BRAND = "MERCEDES";
     private static String model;
     private final Integer POWER;
 
